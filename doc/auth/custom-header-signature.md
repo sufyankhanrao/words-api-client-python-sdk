@@ -23,7 +23,9 @@ You must provide credentials in the client as shown in the following code snippe
 
 ```python
 client = WordsapiClient(
-    custom_header_authentication_credentials=CustomHeaderAuthenticationCredentials()
+    custom_header_authentication_credentials=CustomHeaderAuthenticationCredentials(
+        x_rapid_api_key='X-RapidAPI-Key'
+    )
 )
 ```
 

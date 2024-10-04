@@ -11,11 +11,11 @@ The package is compatible with Python versions `3 >=3.7, <= 3.11`.
 Install the package from PyPi using the following pip command:
 
 ```python
-pip install words-api-client-sdk==1.0.0
+pip install words-api-client-sdk==1.0.4
 ```
 
 You can also view the package at:
-https://pypi.python.org/pypi/words-api-client-sdk/1.0.0
+https://pypi.python.org/pypi/words-api-client-sdk/1.0.4
 
 ## Test the SDK
 
@@ -30,7 +30,7 @@ pytest
 
 ## Initialize the API Client
 
-**_Note:_** Documentation for the client can be found [here.](https://www.github.com/sufyankhanrao/words-api-client-python-sdk/tree/1.0.0/doc/client.md)
+**_Note:_** Documentation for the client can be found [here.](https://www.github.com/sufyankhanrao/words-api-client-python-sdk/tree/1.0.4/doc/client.md)
 
 The following parameters are configurable for the API Client:
 
@@ -44,13 +44,15 @@ The following parameters are configurable for the API Client:
 | `backoff_factor` | `float` | A backoff factor to apply between attempts after the second try. <br> **Default: 2** |
 | `retry_statuses` | `Array of int` | The http statuses on which retry is to be done. <br> **Default: [408, 413, 429, 500, 502, 503, 504, 521, 522, 524]** |
 | `retry_methods` | `Array of string` | The http methods on which retry is to be done. <br> **Default: ['GET', 'PUT']** |
-| `custom_header_authentication_credentials` | [`CustomHeaderAuthenticationCredentials`](https://www.github.com/sufyankhanrao/words-api-client-python-sdk/tree/1.0.0/doc/$a/https://www.github.com/sufyankhanrao/words-api-client-python-sdk/tree/1.0.0/custom-header-signature.md) | The credential object for Custom Header Signature |
+| `custom_header_authentication_credentials` | [`CustomHeaderAuthenticationCredentials`](https://www.github.com/sufyankhanrao/words-api-client-python-sdk/tree/1.0.4/doc/auth/custom-header-signature.md) | The credential object for Custom Header Signature |
 
 The API client can be initialized as follows:
 
 ```python
 client = WordsapiClient(
-    custom_header_authentication_credentials=CustomHeaderAuthenticationCredentials(),
+    custom_header_authentication_credentials=CustomHeaderAuthenticationCredentials(
+        x_rapid_api_key='X-RapidAPI-Key'
+    ),
     environment=Environment.PRODUCTION
 )
 ```
@@ -59,15 +61,15 @@ client = WordsapiClient(
 
 This API uses the following authentication schemes.
 
-* [`RapidAPI-Key (Custom Header Signature)`](https://www.github.com/sufyankhanrao/words-api-client-python-sdk/tree/1.0.0/doc/$a/https://www.github.com/sufyankhanrao/words-api-client-python-sdk/tree/1.0.0/custom-header-signature.md)
+* [`RapidAPI-Key (Custom Header Signature)`](https://www.github.com/sufyankhanrao/words-api-client-python-sdk/tree/1.0.4/doc/auth/custom-header-signature.md)
 
 ## List of APIs
 
-* [AP Is](https://www.github.com/sufyankhanrao/words-api-client-python-sdk/tree/1.0.0/doc/controllers/ap-is.md)
+* [AP Is](https://www.github.com/sufyankhanrao/words-api-client-python-sdk/tree/1.0.4/doc/controllers/ap-is.md)
 
 ## Classes Documentation
 
-* [Utility Classes](https://www.github.com/sufyankhanrao/words-api-client-python-sdk/tree/1.0.0/doc/utility-classes.md)
-* [HttpResponse](https://www.github.com/sufyankhanrao/words-api-client-python-sdk/tree/1.0.0/doc/http-response.md)
-* [HttpRequest](https://www.github.com/sufyankhanrao/words-api-client-python-sdk/tree/1.0.0/doc/http-request.md)
+* [Utility Classes](https://www.github.com/sufyankhanrao/words-api-client-python-sdk/tree/1.0.4/doc/utility-classes.md)
+* [HttpResponse](https://www.github.com/sufyankhanrao/words-api-client-python-sdk/tree/1.0.4/doc/http-response.md)
+* [HttpRequest](https://www.github.com/sufyankhanrao/words-api-client-python-sdk/tree/1.0.4/doc/http-request.md)
 

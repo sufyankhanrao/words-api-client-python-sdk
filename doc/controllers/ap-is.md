@@ -43,7 +43,6 @@ def synonyms(self,
 word = 'lovely'
 
 result = ap_is_controller.synonyms(word)
-print(result)
 ```
 
 ## Example Response *(as JSON)*
@@ -86,7 +85,6 @@ def word(self,
 word = 'Testing'
 
 result = ap_is_controller.word(word)
-print(result)
 ```
 
 
@@ -115,7 +113,6 @@ def examples(self,
 word = 'wind'
 
 result = ap_is_controller.examples(word)
-print(result)
 ```
 
 ## Example Response *(as JSON)*
@@ -157,7 +154,6 @@ def frequency(self,
 word = 'lovely'
 
 result = ap_is_controller.frequency(word)
-print(result)
 ```
 
 ## Example Response *(as JSON)*
@@ -199,7 +195,6 @@ def definitions(self,
 word = 'lovely'
 
 result = ap_is_controller.definitions(word)
-print(result)
 ```
 
 ## Example Response *(as JSON)*
@@ -241,7 +236,6 @@ def pronunciation(self,
 word = 'wind'
 
 result = ap_is_controller.pronunciation(word)
-print(result)
 ```
 
 ## Example Response *(as JSON)*

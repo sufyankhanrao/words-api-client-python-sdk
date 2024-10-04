@@ -13,13 +13,15 @@ The following parameters are configurable for the API Client:
 | `backoff_factor` | `float` | A backoff factor to apply between attempts after the second try. <br> **Default: 2** |
 | `retry_statuses` | `Array of int` | The http statuses on which retry is to be done. <br> **Default: [408, 413, 429, 500, 502, 503, 504, 521, 522, 524]** |
 | `retry_methods` | `Array of string` | The http methods on which retry is to be done. <br> **Default: ['GET', 'PUT']** |
-| `custom_header_authentication_credentials` | [`CustomHeaderAuthenticationCredentials`]($a/custom-header-signature.md) | The credential object for Custom Header Signature |
+| `custom_header_authentication_credentials` | [`CustomHeaderAuthenticationCredentials`](auth/custom-header-signature.md) | The credential object for Custom Header Signature |
 
 The API client can be initialized as follows:
 
 ```python
 client = WordsapiClient(
-    custom_header_authentication_credentials=CustomHeaderAuthenticationCredentials(),
+    custom_header_authentication_credentials=CustomHeaderAuthenticationCredentials(
+        x_rapid_api_key='X-RapidAPI-Key'
+    ),
     environment=Environment.PRODUCTION
 )
 ```
